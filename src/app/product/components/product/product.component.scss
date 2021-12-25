@@ -1,0 +1,17 @@
+//  <app-product> acctua como contenedor div ,se aplica el :host 
+//para hacer referencia
+// :host{
+//     margin: 2px;
+//     border: 1px solid #000000;
+//     border-radius: 5px;
+//     display: block;
+// }
+// figure{
+//   max-width: 100%;
+
+// }
+img{
+
+    height: 200px;
+    object-fit: cover;
+}

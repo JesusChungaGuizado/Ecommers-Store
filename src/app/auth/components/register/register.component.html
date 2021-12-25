@@ -1,0 +1,29 @@
+<div class="login">
+    <form [formGroup]="form" (ngSubmit)="register($event)" >
+        <h2>Registrarme</h2>
+
+        <mat-form-field appearance="fill">
+            <mat-label>UserName</mat-label>
+            <input matInput placeholder="Admin" formControlName="user" >
+            <mat-error *ngIf="userField?.invalid">{{ getErrorUser()}} </mat-error>
+            
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="example@gmail.com" formControlName="email" >
+            <mat-error *ngIf="emailField?.invalid">{{ getErrorEmail()}} </mat-error>
+            
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="passField?.invalid">{{ getErrorPass()}} </mat-error>
+          
+          </mat-form-field>
+          <button mat-raised-button [disabled]="form.invalid" type="submit">Register</button>
+    </form>
+    
+</div>

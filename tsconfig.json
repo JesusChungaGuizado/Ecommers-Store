@@ -8,7 +8,8 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,//cambio
+    "strictPropertyInitialization": false,//agrego
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
